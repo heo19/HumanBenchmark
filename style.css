@@ -61,12 +61,57 @@ body{
     margin-bottom:0;
 }
 
+.mainLevel{
+    color:white;
+    font-family:'Roboto', sans-serif;
+    font-weight:400;
+    font-size:60px;
+    margin-bottom:0;
+}
+
 .mainDescription{
     color:white;
     font-family:'Roboto', sans-serif;
     font-weight:400;
     margin-top:0;
-    margin-bottom:30px;
+    margin-bottom:0;
+}
+
+.mainDirection{
+    color:rgba(255, 255, 255, 0.6);
+    margin-top:0;
+    font-family:'Roboto', sans-serif;
+    font-weight:400;
+}
+
+.mainNumberLabel{
+    color:rgba(255, 255, 255, 0.6);
+    margin-bottom:0;
+    font-family:'Roboto', sans-serif;
+    font-weight:400;
+}
+
+.mainNumber{
+    color:white;
+    font-family:'Roboto', sans-serif;
+    font-weight:400;
+    font-size:30px;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+.mainInput{
+    background: rgba(0, 0, 100, 0.2);
+    border-radius: 3px;
+    text-align: center;
+    font-size: 48px;
+    height:80px;
+    width:950px;
+    border-color:transparent;
+    outline-style: none;
+    box-shadow: none;
+    appearance: none;
+    color:white;
 }
 
 .mainButton{
@@ -80,6 +125,7 @@ body{
     font-family:'Roboto', sans-serif;
     font-weight:500;
     font-size:20px;
+    margin-top:30px;
     margin-bottom:50px;
 }
 
