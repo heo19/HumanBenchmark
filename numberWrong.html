@@ -26,12 +26,11 @@
         <h3 class="mainNumberLabel">Number</h3>
         <h2 class="mainNumber" id="generatedValue"></h2>
         <h3 class="mainNumberLabel">Your Answer</h3>
-        <h2 class="mainNumber" id="userInput"></h2>
+        <h2 class="mainNumberWrong" id="userInput"></h2>
         <h1 class="mainLevel" id="currentLevel"></h1>
-        <a href="numberLoading.html">
-            <button class="mainButton">Next</button>
+        <a href="numberMemory.html">
+            <button class="mainButton">Try again</button>
         </a>
-
     </div>
 
     <div class="bottomScreen">
@@ -71,7 +70,6 @@
         </div>
 
     </div>
-
     <script>
         //console.log("assignValueToEndingPage() isCalled");
 
@@ -82,7 +80,7 @@
         userInput.innerHTML = localStorage.getItem("userInput");
 
         const currentLevel = document.getElementById("currentLevel");
-        currentLevel.innerHTML = "Level " + (localStorage.getItem("level") - 1);
+        currentLevel.innerHTML = "Level " + localStorage.getItem("level");
     </script>
 </body>
 

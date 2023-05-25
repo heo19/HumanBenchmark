@@ -20,8 +20,7 @@
     </div>
 
     <div class="mainScreen">
-        
-        <h1 class="mainTitle">2</h1>
+        <h1 class="mainTitle" id="generatedValue"></h1>
 
         <a href="numberAnswer.html">
             <button class="mainButton">Next</button>
@@ -64,5 +63,18 @@
         </div>
 
     </div>
+
+    <script>
+        //console.log("generateNumber() isCalled");
+        var level = localStorage.getItem("level");
+        var answerNumber = Math.floor(Math.random() * Math.pow(10, level));
+        while(answerNumber < Math.pow(10, level - 1)){
+            answerNumber = Math.floor(Math.random() * Math.pow(10, level));
+        }
+        localStorage.setItem("generatedValue", answerNumber);
+
+        const outputNumber = document.getElementById("generatedValue");
+        outputNumber.innerHTML = answerNumber;
+    </script>
 </body>
 </html>

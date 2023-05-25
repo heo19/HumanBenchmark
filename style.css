@@ -100,6 +100,16 @@ body{
     margin-bottom:0;
 }
 
+.mainNumberWrong{
+    color:black;
+    font-family:'Roboto', sans-serif;
+    font-weight:400;
+    font-size:30px;
+    text-decoration:line-through;
+    margin-top:0;
+    margin-bottom:0;
+}
+
 .mainInput{
     background: rgba(0, 0, 100, 0.2);
     border-radius: 3px;

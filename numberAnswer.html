@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f075ea5918.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -23,10 +24,9 @@
     <div class="mainScreen">
         <h2 class="mainDescription">What was the number?</h2>
         <h3 class="mainDirection">Press enter to submit</h3>
-        <input pattern="[0-9]*" type="text" class="mainInput">
-        <a href="numberEnding.html">
-            <button class="mainButton">Submit</button>
-        </a>
+        <input pattern="[0-9]*" type="text" class="mainInput" id="userInput">
+        <button class="mainButton" id="submitButton" onclick="checkCorrection()">Submit</button>
+        
     </div>
 
     <div class="bottomScreen">
@@ -63,7 +63,6 @@
         <div class="adBox">
             <p class="adText">This is Where Another Ad displays!</p>
         </div>
-
     </div>
 </body>
 </html>
