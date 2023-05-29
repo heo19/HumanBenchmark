@@ -21,9 +21,9 @@
     </div>
 
     <div class="mainScreen">
-        <img class="targetImg" src="images/aimTrainerTarget.png">
+        <span class="targetDot"></span>
         <h2 class="endingDescription">Average time per target</h2>
-        <h1 class="endingResult">533ms</h1>
+        <h1 class="endingResult" id="timePerTarget"></h1>
         <h2 class="endingDescription">Save your score to see how you compare</h2>
         <a href="aimTrainer.html">
             <button class="mainButton">Try Again</button>
@@ -55,5 +55,12 @@
             <p class="adText">This is Where Another Ad displays!</p>
         </div>
     </div>
+
+    <script>
+        const timePerTarget = document.getElementById("timePerTarget");
+        const elapsedTime = localStorage.getItem("endTime") - localStorage.getItem("startTime");
+        const elapsedTimePerTarget = Math.floor(elapsedTime / 30);
+        timePerTarget.innerHTML = elapsedTimePerTarget.toString() + "ms";
+    </script>
 </body>
 </html>

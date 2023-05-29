@@ -26,7 +26,7 @@
             <h2 id="score"></h2>
         </div>
         <div class="gameBoard">
-            <img class="targetImg" id="target" src="images/aimTrainerTarget.png" onclick="changeLocation()">
+            <span class="targetDot" id="target" src="images/aimTrainerTarget.png" onclick="changeLocation()"></span>
         </div>
         
         
@@ -72,6 +72,7 @@
             remaining--;
             score.innerHTML = remaining;
             if(remaining == 0){
+                localStorage.setItem("endTime", Date.now());
                 window.location.href = "aimTrainerEnding.html";
             } else {
                 randomizeLocation();

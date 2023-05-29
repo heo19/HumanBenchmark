@@ -21,7 +21,7 @@
 
     <div class="mainScreen">
         <h1 class="mainTitle">Aim Trainer</h1>
-        <img class="targetImg" src="images/aimTrainerTarget.png" onclick="startGame()">
+        <span class="targetDot" onclick="startGame()"></span>
         <h2 class="mainDescription">Hit 30 targets as quickly as you can. Click the target above to begin</h2>
     </div>
 
@@ -53,7 +53,8 @@
 
     <script>
         function startGame(){
-            window.location.href = "gameScreen.html"
+            localStorage.setItem("startTime", Date.now());
+            window.location.href = "gameScreen.html";
         }
     </script>
 </body>
