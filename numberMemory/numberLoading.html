@@ -63,17 +63,18 @@
         </div>
 
     </div>
-
+    
     <script>
+        const generateId = "generatedValue";
         //console.log("generateNumber() isCalled");
         var level = localStorage.getItem("level");
         var answerNumber = Math.floor(Math.random() * Math.pow(10, level));
         while(answerNumber < Math.pow(10, level - 1)){
             answerNumber = Math.floor(Math.random() * Math.pow(10, level));
         }
-        localStorage.setItem("generatedValue", answerNumber);
+        localStorage.setItem(generateId, answerNumber);
 
-        const outputNumber = document.getElementById("generatedValue");
+        const outputNumber = document.getElementById(generateId);
         outputNumber.innerHTML = answerNumber;
     </script>
 </body>

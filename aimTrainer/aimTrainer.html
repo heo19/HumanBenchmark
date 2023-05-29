@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aim Trainer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="topBar">
+        <button class="topButton" id="homeButton">HUMAN BENCHMARK</button>
+        <button class="topButton" id="dashboardButton">DASHBOARD</button>
+        <button class="topButton" id="signUpButton">SIGN UP</button>
+        <button class="topButton" id="loginButton">LOGIN</button>
+    </div>
+
+    <div class="mainScreen">
+        <h1 class="mainTitle">Aim Trainer</h1>
+        <img class="targetImg" src="images/aimTrainerTarget.png" onclick="startGame()">
+        <h2 class="mainDescription">Hit 30 targets as quickly as you can. Click the target above to begin</h2>
+    </div>
+
+    <div class="bottomScreen">
+        <div class="adBox">
+            <p class="adText">This is Where the Ad displays!</p>
+        </div>
+
+        <div class="additionalInfoBox">
+            <div class="aboutTheTestBox">
+                <h2 class="aboutTheTestTitle">Aim Trainer</h2>
+                    <p class="aboutTheTestText">Click the targets as quickly and accurately as you can.</p>
+                    <p class="aboutTheTestText">This tests reflexes and hand-eye coordination.</p>
+                    <p class="aboutTheTestText">Once you've clicked 30 targets, your score and average time per target will be displayed.</p>
+                    <p class="aboutTheTestText">Scores in this test are slower than the <a href="https://humanbenchmark.com/tests/reactiontime">simple reaction time test</a>, because you must react and then move the cursor.</p>
+                    <p class="aboutTheTestText">This test is best taken with a mouse or tablet screen. Trackpads are difficult to score well with.</p>
+            </div>
+
+            <div class="statisticsBox">
+                <h2 class="statisticsTitle">Statistics</h2>
+                <img class="statisticsImg" src="images/aimTrainerStat.png">
+            </div>
+        </div>
+
+        <div class="adBox">
+            <p class="adText">This is Where Another Ad displays!</p>
+        </div>
+    </div>
+
+    <script>
+        function startGame(){
+            window.location.href = "gameScreen.html"
+        }
+    </script>
+</body>
+</html>

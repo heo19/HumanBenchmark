@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aim Trainer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f075ea5918.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="topBar">
+        <button class="topButton" id="homeButton">HUMAN BENCHMARK</button>
+        <button class="topButton" id="dashboardButton">DASHBOARD</button>
+        <button class="topButton" id="signUpButton">SIGN UP</button>
+        <button class="topButton" id="loginButton">LOGIN</button>
+    </div>
+
+    <div class="mainScreen">
+        <div class="scoreBoard">
+            <h2 class="remaining">Remaining: </h2>
+            <h2 id="score"></h2>
+        </div>
+        <div class="gameBoard">
+            <img class="targetImg" id="target" src="images/aimTrainerTarget.png" onclick="changeLocation()">
+        </div>
+        
+        
+    </div>
+
+    <div class="bottomScreen">
+        <div class="adBox">
+            <p class="adText">This is Where the Ad displays!</p>
+        </div>
+
+        <div class="additionalInfoBox">
+            <div class="aboutTheTestBox">
+                <h2 class="aboutTheTestTitle">Aim Trainer</h2>
+                    <p class="aboutTheTestText">Click the targets as quickly and accurately as you can.</p>
+                    <p class="aboutTheTestText">This tests reflexes and hand-eye coordination.</p>
+                    <p class="aboutTheTestText">Once you've clicked 30 targets, your score and average time per target will be displayed.</p>
+                    <p class="aboutTheTestText">Scores in this test are slower than the <a href="https://humanbenchmark.com/tests/reactiontime">simple reaction time test</a>, because you must react and then move the cursor.</p>
+                    <p class="aboutTheTestText">This test is best taken with a mouse or tablet screen. Trackpads are difficult to score well with.</p>
+            </div>
+
+            <div class="statisticsBox">
+                <h2 class="statisticsTitle">Statistics</h2>
+                <img class="statisticsImg" src="images/aimTrainerStat.png">
+            </div>
+        </div>
+
+        <div class="adBox">
+            <p class="adText">This is Where Another Ad displays!</p>
+        </div>
+    </div>
+
+    <script>
+        const target = document.getElementById("target");
+        const score = document.getElementById("score");
+
+        randomizeLocation();
+
+        var remaining = 30;
+        score.innerHTML = remaining;
+
+        function changeLocation() {
+            console.log("changeLocation is Called!");
+            remaining--;
+            score.innerHTML = remaining;
+            if(remaining == 0){
+                window.location.href = "aimTrainerEnding.html";
+            } else {
+                randomizeLocation();
+            }
+        }
+
+        //range = margin left = -800 to 800, margin top = -300 to 300
+        function randomizeLocation() {
+            var horizontal = Math.floor(Math.random() * 1600) - 800;
+            var vertical = Math.floor(Math.random() * 600) - 300;
+
+            target.style.marginLeft = horizontal.toString() + "px";
+            target.style.marginTop = vertical.toString() + "px";
+        }
+    </script>
+</body>
+</html>
