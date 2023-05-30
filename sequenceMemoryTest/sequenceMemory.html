@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequence Memory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f075ea5918.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="topBar">
+        <button class="topButton" id="homeButton">HUMAN BENCHMARK</button>
+        <button class="topButton" id="dashboardButton">DASHBOARD</button>
+        <button class="topButton" id="signUpButton">SIGN UP</button>
+        <button class="topButton" id="loginButton">LOGIN</button>
+    </div>
+
+    <div class="mainScreen" id="mainScreen">
+        <div id="gameScreen">
+            <i class="fa-solid fa-memory fa-fade fa-6x" id="icon"></i>
+            <h1 class="mainTitle" id="mainTitle">Sequence Memory Test</h1>
+            <h2 class="mainDescription" id="mainDescription">Memorize the pattern</h2>
+            <button class="mainButton" onclick="callGamePage()" id="startButton">Start</button>
+        </div>
+    </div>
+
+    <div class="bottomScreen">
+        <div class="adBox">
+            <p class="adText">This is Where the Ad displays!</p>
+        </div>
+
+        <div class="additionalInfoBox">
+            <div class="statisticsBox">
+                <h2 class="statisticsTitle">Statistics</h2>
+                <img class="statisticsImg" src="images/sequenceMemoryImage.png">
+            </div>
+    
+            <div class="aboutTheTestBox">
+                <h2 class="aboutTheTestTitle">About the Test</h2>
+                <p class="aboutTheTestText">
+                    Memorize the sequence of buttons that light up, then press them in order.
+                </p>
+                <p class="aboutTheTestText">
+                    Every time you finish the pattern, it gets longer.
+                </p>
+                <p class="aboutTheTestText">
+                    Make a mistake, and the test is over.
+                </p>
+            </div>
+        </div>
+
+        <div class="adBox">
+            <p class="adText">This is Where Another Ad displays!</p>
+        </div>
+    </div>
+    
+</body>
+</html>

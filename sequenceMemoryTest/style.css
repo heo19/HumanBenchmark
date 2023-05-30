@@ -24,9 +24,11 @@ body{
     align-items:center;
 }
 
-.gameBoard{
-    height:500px;
-    width:1000px;
+#gameScreen{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
 .topButton{
@@ -70,14 +72,21 @@ body{
     color:white;
     font-family:'Roboto', sans-serif;
     font-weight:400;
-    margin-top:20px;
-    margin-bottom:50px;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+.mainDirection{
+    color:rgba(255, 255, 255, 0.6);
+    margin-top:0;
+    font-family:'Roboto', sans-serif;
+    font-weight:400;
 }
 
 .mainButton{
     background-color:rgb(255, 209, 84);
     border:none;
-    width:130px;
+    width:100px;
     height:45px;
     border: 1px solid;
     border-color:rgb(255, 209, 84);
@@ -85,8 +94,13 @@ body{
     font-family:'Roboto', sans-serif;
     font-weight:500;
     font-size:20px;
-    margin-top:20px;
+    margin-top:30px;
     margin-bottom:50px;
+}
+
+.mainButton:hover{
+    background-color: white;
+    border-color:white;
 }
 
 .bottomScreen{
@@ -120,12 +134,12 @@ body{
 
 .statisticsBox{
     width:480px;
-    height:480px;
+    height:420px;
     background-color: white;
     border: 1px solid;
     border-color:white;
     border-radius:5px;
-    margin-left:10px;
+    margin-right:10px;
 }
 
 .statisticsTitle{
@@ -143,12 +157,12 @@ body{
 
 .aboutTheTestBox{
     width:480px;
-    height:480px;
+    height:420px;
     background-color: white;
     border:1px solid;
     border-color:white;
     border-radius:5px;
-    margin-right:10px;
+    margin-left:10px;
 }
 
 .aboutTheTestTitle{
@@ -167,29 +181,14 @@ body{
     margin-right:30px;
 }
 
-.targetDot{
-    height: 100px;
-    width: 100px;
-    background-color: rgba(255, 0, 0, 0.5);
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.scoreBoard{
+#scoreBoard{
     display:flex;
     flex-direction:row;
     justify-content:center;
     align-items:center;
 }
 
-.gameBoard{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-}
-
-.remaining{
+#levelText{
     color:white;
     margin-right: 10px;
     opacity: 0.6;
@@ -198,33 +197,38 @@ body{
     font-size:32px;
 }
 
-#score{
+#levelNumber{
     color:white;
     font-family:'Roboto', sans-serif;
     font-weight:400;
     font-size:32px;
 }
 
-#target{
-    margin-left:-800px;
-    margin-right:0;
-    margin-top:-300px;
-    margin-bottom:0px;
+#gameBoard{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 30px;
+}
+.gameRow{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
 }
 
-.endingResult{
-    color:white;
-    font-family:'Roboto', sans-serif;
-    font-weight:400;
-    font-size:78px;
-    margin-bottom:30px;
-    margin-top:0;
+.gameBox{
+    background-color: rgb(0, 0, 102);
+    opacity:0.15;
+    width: 116px;
+    height: 116px;
+    border-radius: 16.5px;
+    border: 8.25px solid rgb(43, 135, 209);
+    transition: background-color 0.5s;
 }
 
-.endingDescription{
-    color:white;
-    font-family:'Roboto', sans-serif;
-    font-weight:400;
-    margin-top:20px;
-    margin-bottom:0;
+.gameBox.highlight{
+    background-color:white;
+    opacity: 1;
 }
