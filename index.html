@@ -4,17 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HumanBenchmark Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f075ea5918.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 <body>
-    <a href="aimTrainer/aimTrainer.html">
-        <button>Navigate to Aim Trainer</button>>
-    </a>
-    <a href="numberMemory/numberMemory.html">
-        <button>Navigate to Number Memory</button>
-    </a>
-    <a href="sequenceMemoryTest/sequenceMemory.html">
-        <button >Navigate to Sequency Memory</button>
-    </a>
+    <div class="topBar">
+        <button class="topButton" id="homeButton">HUMAN BENCHMARK</button>
+        <button class="topButton" id="dashboardButton">DASHBOARD</button>
+        <button class="topButton" id="signUpButton">SIGN UP</button>
+        <button class="topButton" id="loginButton">LOGIN</button>
+    </div>
+
+    <div class="mainScreen" id="mainScreen">
+        <div id="gameScreen">
+            <i class="fa-solid fa-memory fa-fade fa-6x" id="icon"></i>
+            <h1 class="mainTitle" id="mainTitle">Human Benchmark</h1>
+            <h2 class="mainDescription" id="mainDescription">Measure your abilities with brain games and cognitive tests.</h2>
+            <a href="aimTrainer/aimTrainer.html"><button class="startButton" id="startButton">Get Started</button></a>
+        </div>
+    </div>
+
+    <div class="bottomScreen">
+        <div class="adBox">
+            <p class="adText">This is Where the Ad displays!</p>
+        </div>
+
+        <div class="additionalInfoBox">
+            <a href="aimTrainer/aimTrainer.html" class="no-underline">
+                <div class="boxToAnotherPage">
+                    <p class="pageBoxTitle">Aim Trainer</p>
+                    <p class="pageBoxText">How quickly can you hit all targets?</p>
+                </div>
+            </a>
+            <a href="numberMemory/numberMemory.html" class="no-underline" > 
+                <div class="boxToAnotherPage">
+                    <p class="pageBoxTitle">Number Memory</p>
+                    <p class="pageBoxText">Remember the longest number you can.</p>
+                </div>
+            </a>
+            <a href="sequenceMemoryTest/sequenceMemory.html" class="no-underline">
+                <div class="boxToAnotherPage">
+                    <p class="pageBoxTitle">Sequency Memory</p>
+                    <p class="pageBoxText">Remember an increasingly long pattern of button presses.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="adBox">
+            <p class="adText">This is Where Another Ad displays!</p>
+        </div>
+    </div>
 </body>
 </html>
